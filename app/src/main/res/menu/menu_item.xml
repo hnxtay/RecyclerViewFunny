@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/mode"
+        android:icon="@drawable/ic_brightness_2_black_24dp"
+        android:title="mode"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/share"
+        android:icon="@drawable/ic_share_black_24dp"
+        android:title="share"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/task"
+        android:icon="@drawable/ic_filter_9_plus_black_24dp"
+        android:title="task"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/time"
+        android:icon="@drawable/ic_access_time_black_24dp"
+        android:title="time"
+        app:showAsAction="always" />
+<item android:id="@+id/more" android:title="more" app:showAsAction="always" android:icon="@drawable/ic_more_vert_black_24dp"/>
+</menu>
