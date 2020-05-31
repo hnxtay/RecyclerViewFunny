@@ -1,10 +1,12 @@
 package com.dev.kd1412.recyclerviewfunny;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.MotionEvent;
 
 import com.dev.kd1412.recyclerviewfunny.adapter.SongAdapter;
 import com.dev.kd1412.recyclerviewfunny.model.Song;
@@ -41,6 +43,22 @@ public class Music extends AppCompatActivity {
         songAdapter = new SongAdapter(songArrayList);
 
         rcv.setAdapter(songAdapter);
+        rcv.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {
+            @Override
+            public boolean onInterceptTouchEvent(@NonNull RecyclerView rv, @NonNull MotionEvent e) {
+                return false;
+            }
+
+            @Override
+            public void onTouchEvent(@NonNull RecyclerView rv, @NonNull MotionEvent e) {
+
+            }
+
+            @Override
+            public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
+
+            }
+        });
 
     }
 }
