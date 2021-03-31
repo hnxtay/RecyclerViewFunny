@@ -8,16 +8,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.MotionEvent;
 
-import com.dev.kd1412.recyclerviewfunny.adapter.SongAdapter;
-import com.dev.kd1412.recyclerviewfunny.model.Song;
+import com.dev.kd1412.recyclerviewfunny.adapter.FoodAdapter;
 
 import java.util.ArrayList;
 
-public class Music extends AppCompatActivity {
+public class Food extends AppCompatActivity {
     private RecyclerView rcv;
-    private Song song;
-    private ArrayList<Song> songArrayList;
-    private SongAdapter songAdapter;
+    private com.dev.kd1412.recyclerviewfunny.model.Food food;
+    private ArrayList<com.dev.kd1412.recyclerviewfunny.model.Food> songArrayList;
+    private FoodAdapter foodAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,19 +29,18 @@ public class Music extends AppCompatActivity {
         rcv.setHasFixedSize(true);
         rcv.setLayoutManager(new LinearLayoutManager(this));
 
-        song = new Song("","Hãy trao cho anh","Sơn Tùng");
-        Song song1 = new Song("","Vẫn Nhớ ","Soobin Hoàng Sơn");
-        Song song2 = new Song("","Tadadada","Xuan Tay");
+        food = new com.dev.kd1412.recyclerviewfunny.model.Food("","");
         songArrayList = new ArrayList<>();
         for (int i =0; i<4; ++i){
-            songArrayList.add(song);
-            songArrayList.add(song1);
-            songArrayList.add(song2);
+            songArrayList.add(food);
+            songArrayList.add(food);
+            songArrayList.add(food);
+            songArrayList.add(food);
+            songArrayList.add(food);
         }
 
-        songAdapter = new SongAdapter(songArrayList);
 
-        rcv.setAdapter(songAdapter);
+        rcv.setAdapter(foodAdapter);
         rcv.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {
             @Override
             public boolean onInterceptTouchEvent(@NonNull RecyclerView rv, @NonNull MotionEvent e) {

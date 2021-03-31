@@ -1,8 +1,6 @@
 package com.dev.kd1412.recyclerviewfunny;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,10 +12,6 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
-import com.dev.kd1412.recyclerviewfunny.adapter.SongAdapter;
-import com.dev.kd1412.recyclerviewfunny.model.Song;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private Button btn;
@@ -41,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Music.class);
+                Intent intent = new Intent(getApplicationContext(), Food.class);
                 startActivity(intent);
             }
         });

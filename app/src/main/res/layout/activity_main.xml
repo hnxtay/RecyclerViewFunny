@@ -8,40 +8,71 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/img"
-        android:layout_width="240dp"
-        android:layout_height="240dp"
-        android:layout_marginTop="92dp"
+        android:id="@+id/img1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="80dp"
         android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintEnd_toStartOf="@+id/img4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:srcCompat="@drawable/ny" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toEndOf="@+id/img4"
+        app:layout_constraintTop_toTopOf="@+id/img4" />
+
+    <ImageView
+        android:id="@+id/img4"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toEndOf="@+id/img1"
+        app:layout_constraintTop_toTopOf="@+id/img1" />
+
+    <ImageView
+        android:id="@+id/img3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="32dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img1" />
+
+    <ImageView
+        android:id="@+id/img5"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toEndOf="@+id/img6"
+        app:layout_constraintTop_toTopOf="@+id/img6" />
+
+    <ImageView
+        android:id="@+id/img6"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toEndOf="@+id/img3"
+        app:layout_constraintTop_toTopOf="@+id/img3" />
 
     <Button
         android:id="@+id/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Open Playlist"
+        android:text="Món ăn ngon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img"
-        app:layout_constraintVertical_bias="0.253" />
+        app:layout_constraintTop_toBottomOf="@+id/img6" />
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="167dp"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toTopOf="@+id/img"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:menu="@menu/menu_item" />
 </androidx.constraintlayout.widget.ConstraintLayout>
